@@ -25,12 +25,12 @@ Partial Class frmLakeEffect
         Me.picLakeEffect = New System.Windows.Forms.PictureBox()
         Me.mnuLakeEffect = New System.Windows.Forms.MenuStrip()
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuEnterSnowfallAmounts = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuClear = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuEnterSnowfallAmounts = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.lstSnowfall = New System.Windows.Forms.ListBox()
+        Me.lstSnowfallAmounts = New System.Windows.Forms.ListBox()
         Me.btnEnterSnowfallAmounts = New System.Windows.Forms.Button()
         Me.lblTotalSnowfallLabel = New System.Windows.Forms.Label()
         Me.lblTotalSnowfall = New System.Windows.Forms.Label()
@@ -69,6 +69,12 @@ Partial Class frmLakeEffect
         Me.mnuFile.Size = New System.Drawing.Size(41, 20)
         Me.mnuFile.Text = "&File"
         '
+        'mnuEnterSnowfallAmounts
+        '
+        Me.mnuEnterSnowfallAmounts.Name = "mnuEnterSnowfallAmounts"
+        Me.mnuEnterSnowfallAmounts.Size = New System.Drawing.Size(214, 22)
+        Me.mnuEnterSnowfallAmounts.Text = "&Enter Snowfall Amounts"
+        '
         'mnuClear
         '
         Me.mnuClear.Name = "mnuClear"
@@ -86,12 +92,6 @@ Partial Class frmLakeEffect
         Me.mnuExit.Size = New System.Drawing.Size(214, 22)
         Me.mnuExit.Text = "E&xit"
         '
-        'mnuEnterSnowfallAmounts
-        '
-        Me.mnuEnterSnowfallAmounts.Name = "mnuEnterSnowfallAmounts"
-        Me.mnuEnterSnowfallAmounts.Size = New System.Drawing.Size(214, 22)
-        Me.mnuEnterSnowfallAmounts.Text = "&Enter Snowfall Amounts"
-        '
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
@@ -102,17 +102,16 @@ Partial Class frmLakeEffect
         Me.lblTitle.TabIndex = 2
         Me.lblTitle.Text = "Lake Effect Snowfall"
         '
-        'lstSnowfall
+        'lstSnowfallAmounts
         '
-        Me.lstSnowfall.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lstSnowfall.FormattingEnabled = True
-        Me.lstSnowfall.ItemHeight = 22
-        Me.lstSnowfall.Items.AddRange(New Object() {"56.4", "15.8", "72.8", "15.4", "12.5", "16.4", "12.5"})
-        Me.lstSnowfall.Location = New System.Drawing.Point(51, 93)
-        Me.lstSnowfall.Name = "lstSnowfall"
-        Me.lstSnowfall.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lstSnowfall.Size = New System.Drawing.Size(68, 158)
-        Me.lstSnowfall.TabIndex = 3
+        Me.lstSnowfallAmounts.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstSnowfallAmounts.FormattingEnabled = True
+        Me.lstSnowfallAmounts.ItemHeight = 16
+        Me.lstSnowfallAmounts.Location = New System.Drawing.Point(12, 93)
+        Me.lstSnowfallAmounts.Name = "lstSnowfallAmounts"
+        Me.lstSnowfallAmounts.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.lstSnowfallAmounts.Size = New System.Drawing.Size(133, 148)
+        Me.lstSnowfallAmounts.TabIndex = 3
         '
         'btnEnterSnowfallAmounts
         '
@@ -133,6 +132,7 @@ Partial Class frmLakeEffect
         Me.lblTotalSnowfallLabel.Size = New System.Drawing.Size(194, 18)
         Me.lblTotalSnowfallLabel.TabIndex = 5
         Me.lblTotalSnowfallLabel.Text = "Total snowfall accumulation"
+        Me.lblTotalSnowfallLabel.Visible = False
         '
         'lblTotalSnowfall
         '
@@ -143,6 +143,7 @@ Partial Class frmLakeEffect
         Me.lblTotalSnowfall.Size = New System.Drawing.Size(104, 19)
         Me.lblTotalSnowfall.TabIndex = 6
         Me.lblTotalSnowfall.Text = "215.7 inches"
+        Me.lblTotalSnowfall.Visible = False
         '
         'frmLakeEffect
         '
@@ -154,7 +155,7 @@ Partial Class frmLakeEffect
         Me.Controls.Add(Me.lblTotalSnowfall)
         Me.Controls.Add(Me.lblTotalSnowfallLabel)
         Me.Controls.Add(Me.btnEnterSnowfallAmounts)
-        Me.Controls.Add(Me.lstSnowfall)
+        Me.Controls.Add(Me.lstSnowfallAmounts)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.picLakeEffect)
         Me.Controls.Add(Me.mnuLakeEffect)
@@ -183,7 +184,7 @@ Partial Class frmLakeEffect
     Friend WithEvents mnuSeparator1 As ToolStripSeparator
     Friend WithEvents mnuExit As ToolStripMenuItem
     Friend WithEvents lblTitle As Label
-    Friend WithEvents lstSnowfall As ListBox
+    Friend WithEvents lstSnowfallAmounts As ListBox
     Friend WithEvents btnEnterSnowfallAmounts As Button
     Friend WithEvents lblTotalSnowfallLabel As Label
     Friend WithEvents lblTotalSnowfall As Label
